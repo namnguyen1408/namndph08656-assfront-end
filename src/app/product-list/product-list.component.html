@@ -1,0 +1,52 @@
+ <style>
+    #customers {
+       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+       border-collapse: collapse;
+       width: 100%;
+   }
+
+   #customers td, #customers th {
+       border: 1px solid #ddd;
+       padding: 8px;
+   }
+
+   #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+   #customers tr:hover {background-color: #ddd;}
+
+   #customers th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: left;
+       background-color: rgb(54, 180, 214);
+       color: white;
+   }
+ </style>
+ <app-header-top></app-header-top><br><br><br><br>
+ <h2 style="text-align: center; padding: 20px;"> Products List</h2>
+ <div style="padding-top: 70px;">
+   <div class="btn btn-success" (click)="click()">{{btnName}}
+   </div>
+   <div class="alert alert-primary my-2" role="alert" *ngIf="isDisplay">
+<strong >NamNDPH08656</strong>
+   </div>
+ </div>
+<table id = "customers">
+ <tr >
+   <th>Id</th>
+   <th >Img</th>
+   <th>Name</th>
+   <th >Price</th>
+   <th >Desc</th>
+  
+ </tr>
+ <tr *ngFor="let product of products">
+ <td >{{product.id}}</td>
+ <td ><a href="#"><img style="width: 250px; height: 270px;" class="card-img-top" src="{{product.img}}"  alt=""></a>
+ </td>
+ <td >{{product.name}}</td>
+ <td >{{product.price}}</td>
+ <td >{{product.desc}}</td>
+
+ </tr>
+</table>  
