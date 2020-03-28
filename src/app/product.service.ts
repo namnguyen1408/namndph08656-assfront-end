@@ -8,7 +8,7 @@ import { Product } from './Product';
   providedIn: 'root'
 })
 export class ProductService {
-  api = 'https://5e79aefa17314d0016133349.mockapi.io/products';
+  api = 'https://5e7c3e21a917d7001668302e.mockapi.io/products';
 
   products = data;
   constructor(
@@ -26,5 +26,16 @@ export class ProductService {
     return this.http.get<Product>(`${this.api}/${id}`);
     // return this.products.find(product => product.id == id);
   }
-
+addProduct(product){
+    return this.http.post<Product>(`${this.api}`,product);
+    // const newProduct = { id: 5, ...product};
+    // this.products.push(newProduct);
+    // console.log(this.products)
+  }
+  updateProduct(product){
+    return this.http.put<Product>(`${this.api}/${product.id}`, product);
+ }
+ deleteProduct(product){
+  return this.http.delete<Product>(`${this.api}/${product.id}`);
+}
 }
