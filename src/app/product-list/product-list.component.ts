@@ -33,4 +33,12 @@ product : Product;
     if(this.isDisplay) this.btnName="Click to hide"
     else this.btnName="Click to show";
   }
+  removeItem(id){
+  this.products = this.products.filter(product => product.id !=id);}
+  updateProduct(){
+    this.productService.updateProduct(this.product).subscribe(data => console.log(data));
+  }
+  deleteProduct(){
+    this.productService.deleteProduct(this.product.id);
+  }
 }

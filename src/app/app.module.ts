@@ -11,8 +11,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { BannerComponent } from './banner/banner.component';
 import { FashionComponent } from './fashion/fashion.component';
 import { HeaderTopComponent } from './header-top/header-top.component';
+import {NgbModule, NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgbPaginationModule,
     HttpClientModule
   ],
   providers: [ProductService],

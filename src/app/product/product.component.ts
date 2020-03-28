@@ -11,7 +11,8 @@ export class ProductComponent implements OnInit {
   selected: Product;
 products : Product[];
 product : Product;
-
+ page= 1;
+  pageSize = 3;
   constructor(
         private productService : ProductService
 
