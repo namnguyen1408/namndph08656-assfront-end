@@ -14,7 +14,9 @@ import { HeaderTopComponent } from './header-top/header-top.component';
 import {NgbModule, NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 import { from } from 'rxjs';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { from } from 'rxjs';
     FashionComponent,
     HeaderTopComponent,
     ProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,
