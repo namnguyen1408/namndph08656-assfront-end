@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import {ProductService} from '../product.service';
 import { Product } from '../Product';
 import { from } from 'rxjs';
@@ -14,7 +14,8 @@ OnInit {
     product : Product;
   constructor(
     private route : ActivatedRoute,
-    private produceService: ProductService
+    private produceService: ProductService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -27,6 +28,9 @@ getProduct(){
   })
 }
 updateProduct(){
-  this.produceService.updateProduct(this.product).subscribe(data => console.log(data));
+  this.produceService.updateProduct(this.product).subscribe(data => 
+      this.productService.deleteProduct(this.product).subscribe(data => {
+        this.router.navigateByUrl("/admin/product")
+      }));
 }
 }
