@@ -6,17 +6,21 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 const routes: Routes = [
   {path: '',redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component:HomeComponent},
   {path: 'manager', component: ProductListComponent,
-   children: [
-    {path: 'oke', component: ProductListComponent},
-    {path: 'edit/:productID', component:EditProductComponent}
-  ]},
-  {path: 'product', component: ProductComponent},
+ },
+ {path: 'shop', component: ProductComponent},
+ {path: 'admin', component: AdminComponent,
+ children: [
+   {path: '', redirectTo:'product', pathMatch:'full'},
+   {path: 'product', component: ProductListComponent},
+ ]},
+  {path: 'product/edit/:productID', component: EditProductComponent},
   {path: 'product/:productID', component: ProductDetailComponent},
   {path: '**', component: NotFoundComponent}
 ];
