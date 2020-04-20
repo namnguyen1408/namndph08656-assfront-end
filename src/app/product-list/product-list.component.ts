@@ -9,14 +9,11 @@ import { data } from '../Mockupdata';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-page = 1;
-  pageSize = 4;
-  collectionSize = data.length;
+ page= 1;
+  pageSize = 6;
+ 
 
-  get produc(): Product[] {
-    return data
-      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
-  }
+  
 
 
   selected: Product;
