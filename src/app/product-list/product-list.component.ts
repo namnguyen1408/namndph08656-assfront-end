@@ -9,12 +9,20 @@ import { data } from '../Mockupdata';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
+page = 1;
+  pageSize = 4;
+  collectionSize = data.length;
+
+  get produc(): Product[] {
+    return data
+      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+  }
+
+
   selected: Product;
 products : Product[];
 product : Product;
-page = 2;
-  pageSize = 4;
-  collectionSize = data.length;
+
   constructor(
     private productService : ProductService
   ) { }
@@ -44,9 +52,5 @@ page = 2;
   deleteProduct(){
     this.productService.deleteProduct(this.product.id);
   }
-    get data(): Product[] {
-    return data
-     
-      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
-  }
+ 
 }
