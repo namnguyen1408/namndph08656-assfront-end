@@ -7,9 +7,10 @@ import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { AdminComponent } from './admin/admin.component';
-import { AddComponent } from './add/add.component';
+
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { ContactComponent } from './contact/contact.component';
+import { AddComponent } from './add/add.component';
 
 
 

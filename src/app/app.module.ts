@@ -17,12 +17,11 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { from } from 'rxjs';
 import { AdminComponent } from './admin/admin.component';
-
-
 import { AddComponent } from './add/add.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { ContactComponent } from './contact/contact.component';
 import { AdminShowComponent } from './admin-show/admin-show.component';
+
 
 @NgModule({
   declarations: [
@@ -37,14 +36,11 @@ import { AdminShowComponent } from './admin-show/admin-show.component';
     ProductDetailComponent,
     EditProductComponent,
     AdminComponent,
-  
     AddComponent,
-  
     DeleteProductComponent,
-  
     ContactComponent,
-  
     AdminShowComponent
+    
   ],
   imports: [
     BrowserModule,
