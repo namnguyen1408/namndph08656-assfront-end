@@ -7,19 +7,22 @@ import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { DeleteProductComponent } from './delete-product/delete-product.component';
 
 
 const routes: Routes = [
   {path: '',redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component:HomeComponent},
-  {path: 'manager', component: ProductListComponent,
- },
+
  {path: 'shop', component: ProductComponent},
  {path: 'admin', component: AdminComponent,
  children: [
    {path: '', redirectTo:'product', pathMatch:'full'},
    {path: 'product', component: ProductListComponent},
-   {path: 'edit/:productID', component: EditProductComponent}
+   {path: 'edit/:productID', component: EditProductComponent},
+   {path: 'addproduct', component: AddProductComponent},
+   {path: 'delete/:productID', component: DeleteProductComponent}
  ]},
   
   {path: 'product/:productID', component: ProductDetailComponent},

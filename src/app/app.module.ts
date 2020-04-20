@@ -17,6 +17,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { from } from 'rxjs';
 import { AdminComponent } from './admin/admin.component';
+import { AdProductComponent } from './ad-product/ad-product.component';
+import { DeleteProductComponent } from './delete-product/delete-product.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { AdminComponent } from './admin/admin.component';
     ProductComponent,
     ProductDetailComponent,
     EditProductComponent,
-    AdminComponent
+    AdminComponent,
+    AdProductComponent,
+    DeleteProductComponent
   ],
   imports: [
     BrowserModule,
