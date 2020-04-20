@@ -21,6 +21,7 @@ import { AdminComponent } from './admin/admin.component';
 
 import { AddComponent } from './add/add.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
   
     AddComponent,
   
-    DeleteProductComponent
+    DeleteProductComponent,
+  
+    ContactComponent
   ],
   imports: [
     BrowserModule,

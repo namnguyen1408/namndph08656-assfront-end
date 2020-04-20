@@ -28,6 +28,9 @@
               "src/css/css.scss",
               "src/css/font-awesome.min.css",
                "src/css/font-awesome.css",
+               "src/css/contact/animate.css",
+                "src/css/contact/main.scss",
+                 "src/css/contact/util.css",
               "src/css/bootstrap.min.css"
             ],
             "scripts": []

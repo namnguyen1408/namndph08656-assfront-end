@@ -9,6 +9,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddComponent } from './add/add.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -16,7 +17,7 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
 const routes: Routes = [
   {path: '',redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component:HomeComponent},
-
+{path: 'contact', component:ContactComponent},
  {path: 'shop', component: ProductComponent},
  {path: 'admin', component: AdminComponent,
  children: [
