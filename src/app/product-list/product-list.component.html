@@ -22,15 +22,15 @@
        color: white;
    }
  </style>
-<br><br><br><br>
- <h2 style="text-align: center; padding: 20px;"> Products List</h2>
- <div style="padding-top: 70px;">
+
+ <h2 style="text-align: center; "> Products List</h2>
+ <div style="padding-top: 20px;">
    <div class="btn btn-success" (click)="click()">{{btnName}}
    </div>
    <div class="alert alert-primary my-2" role="alert" *ngIf="isDisplay">
 <strong >NamNDPH08656</strong>
    </div>
-    <button class="btn btn-success" routerLink="/addproduct" >Add Product</button>
+    <button class="btn btn-success" routerLink="/admin/add" >Add Product</button>
  </div>
 <table id = "customers">
  <tr >
@@ -50,7 +50,7 @@
  <td >{{product.price}}</td>
  <td >{{product.desc}}</td>
  <td ><button  class="btn btn-primary" routerLink="/admin/edit/{{product.id}}">Update</button>
- <td ><button  class="btn btn-primary" routerLink="/product/delete/{{product.id}}">Delete</button>
+ <td ><button  class="btn btn-primary" routerLink="/admin/delete/{{product.id}}">Delete</button>
  
 
  </tr>

@@ -28,9 +28,8 @@ getProduct(){
   })
 }
 updateProduct(){
-  this.produceService.updateProduct(this.product).subscribe(data => 
-      this.productService.deleteProduct(this.product).subscribe(data => {
-        this.router.navigateByUrl("/admin/product")
-      }));
+  this.produceService.updateProduct(this.product).subscribe(data => {
+    this.router.navigateByUrl("/admin/product")
+      });
 }
 }
