@@ -31,6 +31,9 @@
                "src/css/contact/animate.css",
                 "src/css/contact/main.scss",
                  "src/css/contact/util.css",
+                 "src/css/chekout/style.scss",
+                 "src/css/chekout/bootstrap.css",
+              
               "src/css/bootstrap.min.css"
             ],
             "scripts": []

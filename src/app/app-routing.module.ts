@@ -11,6 +11,7 @@ import { AdminComponent } from './admin/admin.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { ContactComponent } from './contact/contact.component';
 import { AddComponent } from './add/add.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent},
 {path: 'contact', component:ContactComponent},
  {path: 'shop', component: ProductComponent},
+ {path: 'checkout', component: CheckoutComponent},
  {path: 'admin', component: AdminComponent,
  children: [
    {path: '', redirectTo:'product', pathMatch:'full'},

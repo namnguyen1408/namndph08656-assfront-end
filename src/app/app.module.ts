@@ -21,6 +21,7 @@ import { AddComponent } from './add/add.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { ContactComponent } from './contact/contact.component';
 import { AdminShowComponent } from './admin-show/admin-show.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { AdminShowComponent } from './admin-show/admin-show.component';
     AddComponent,
     DeleteProductComponent,
     ContactComponent,
-    AdminShowComponent
+    AdminShowComponent,
+    CheckoutComponent
     
   ],
   imports: [
