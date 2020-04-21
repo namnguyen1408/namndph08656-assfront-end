@@ -26,9 +26,7 @@
               "**/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css",
               "src/css/admin/css.scss",
-              "src/css/admin/material.min.css",
-              "src/css/admin/table.css",
-              "src/css/admin/vendor.css",
+            
                "src/css/contact/animate.css",
                 "src/css/contact/main.scss",
                  "src/css/contact/util.css",
