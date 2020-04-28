@@ -30,8 +30,14 @@
    <div class="alert alert-primary my-2" role="alert" *ngIf="isDisplay">
 <strong >NamNDPH08656</strong>
    </div>
-    <button class="btn btn-primary" routerLink="/admin/add" >Add Product</button>
+   
  </div>
+ <div class="form-group" >
+     
+    <input type="text"  class="form-control" [(ngModel)]="keyword" name="keyword">
+    <button class="btn btn-success" (click)="Search()">Search</button>
+ 
+</div>
 <table id = "customers">
  <tr >
    <th scope="col">Id</th>

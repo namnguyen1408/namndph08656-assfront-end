@@ -11,11 +11,7 @@ import { data } from '../Mockupdata';
 export class ProductListComponent implements OnInit {
  page= 1;
   pageSize = 6;
- 
-
-  
-
-
+ public keyword: string;
   selected: Product;
 products : Product[];
 product : Product;
@@ -45,6 +41,13 @@ product : Product;
   this.products = this.products.filter(product => product.id !=id);}
   updateProduct(){
     this.productService.updateProduct(this.product).subscribe(data => console.log(data));
+  }
+   Search(){
+    this.productService.Search(this.keyword).subscribe(data => {
+      console.log(data);
+      this.products = data;
+     });
+
   }
   deleteProduct(){
     this.productService.deleteProduct(this.product.id);

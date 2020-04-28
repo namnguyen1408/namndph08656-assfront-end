@@ -19,6 +19,10 @@ export class ProductService {
   getProducts(): Observable<Product[]>{
     return this.http.get<Product[]>(this.api);
   }
+  Search(keyword: string): Observable<Product[]>{
+      return this.http.get<Product[]>(this.api+ "?Search="+keyword);
+
+  }
   removeProduct(id){
     return this.products.filter(product => product.id != id);
   }

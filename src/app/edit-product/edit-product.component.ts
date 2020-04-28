@@ -4,6 +4,7 @@ import {ProductService} from '../product.service';
 import { Product } from '../Product';
 import { from } from 'rxjs';
 import { data } from '../Mockupdata';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-edit-product',
   templateUrl: './edit-product.component.html',
@@ -11,6 +12,13 @@ import { data } from '../Mockupdata';
 })
 export class EditProductComponent implements 
 OnInit {
+ form = new FormGroup({
+    img: new FormControl('', Validators.required),
+    name: new FormControl('', Validators.required),
+    price: new FormControl('', Validators.required),
+    desc: new FormControl('', Validators.required)
+  })
+
     product : Product;
   constructor(
     private route : ActivatedRoute,

@@ -1,10 +1,10 @@
-  <link href="src/css/admin/css.scss" rel="stylesheet" />
+
 <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 <div class="admin1">
  <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Start Bootstrap</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
+            <a class="navbar-brand" routerLink="/shop"> Modesty style</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
             ><!-- Navbar Search-->
             <ul class="navbar-nav mr-lg-4 w-100">
           <li class="nav-item nav-search d-none d-lg-block w-100">
@@ -24,15 +24,15 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard</a
+                            <div class="sb-sidenav-menu-heading">Manager</div>
+                            <a class="nav-link" routerLink="/admin/product"
+                                ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-slowest"></i></div>
+                                Product List</a
                             >
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Layouts
+                                 Infomation 
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
                             ></a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
@@ -61,13 +61,13 @@
                                     </div>
                                 </nav>
                             </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html"
+                            <div class="sb-sidenav-menu-heading">Actions</div>
+                            <a class="nav-link" routerLink="/admin/add"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts</a
-                            ><a class="nav-link" href="tables.html"
+                                Add Products</a
+                            ><a class="nav-link" routerLink="/shop"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables</a
+                                Shop</a
                             >
                         </div>
 
@@ -75,7 +75,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        Modesty style
                     </div>
                 </nav>
             </div>
